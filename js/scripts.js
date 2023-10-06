@@ -1,1 +1,5 @@
-// 6c67002aaeec83abb358aba2fc8a15ef //
+require('dotenv').config()
+
+const apiKey = process.env.ACCESS;
+
+console.log("This is my key for api:", apiKey);
