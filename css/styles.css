@@ -34,6 +34,7 @@ body {
 
 .form-input-container {
     display: flex;
+    margin-top: 1rem;
 }
 
 .form input {
@@ -81,6 +82,11 @@ body {
     height: 35px;
 }
 
+#description {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
 #description-container {
     display: flex;
     justify-content: center;
@@ -94,7 +100,7 @@ body {
     align-items: center;
 }
 
-#details-container #umidity {
+#details-container #humidity {
     border-right: 1px solid #fff;
     margin: 0.6rem;
     padding: 0.6rem;

@@ -1,5 +1,5 @@
 const apiKey = "6c67002aaeec83abb358aba2fc8a15ef";
-const apiCountryURL = "https://flagsapi.com/";
+const apiCountryURL = "https://flagsapi.com/BR/shiny/64.png";
 
 const cityInput = document.querySelector("#city-input");
 const searchBtn = document.querySelector("#search");
@@ -11,6 +11,8 @@ const descElement = document.querySelector("#description");
 const weatherIconElement = document.querySelector("#weather-icon");
 const humidityElement = document.querySelector("#humidity span");
 const windElement = document.querySelector("#wind span");
+
+const weatherContainer = document.querySelector("#weather-data");
 
 // Funções
 
@@ -33,9 +35,14 @@ const showWeatherData = async (city) => {
     "src",
     `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`
   );
-  //countryElement.setAttribute("src", apiCountryURL + data.sys.country);
+  countryElement.setAttribute(
+    "src",
+    `https://flagsapi.com/${data.sys.country}/shiny/64.png`
+  );
   humidityElement.innerText = `${data.main.humidity}%`;
   windElement.innerText = `${data.wind.speed}km/h`;
+
+  weatherContainer.classList.remove("hide");
 };
 
 // EVENTOS
@@ -46,4 +53,12 @@ searchBtn.addEventListener("click", (Element) => {
   const city = cityInput.value;
 
   showWeatherData(city);
+});
+
+cityInput.addEventListener("keyup", (e) => {
+  if (e.code === "Enter") {
+    const city = e.target.value;
+
+    showWeatherData(city);
+  }
 });
