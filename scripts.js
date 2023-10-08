@@ -1,7 +1,4 @@
-import "./node_modules/dotenv/config.js";
-
-const apiKey = process.env.KEY;
-console.log(apiKey);
+const apiKey = "6c67002aaeec83abb358aba2fc8a15ef";
 
 const cityInput = document.querySelector("#city-input");
 const searchBtn = document.querySelector("#search");
