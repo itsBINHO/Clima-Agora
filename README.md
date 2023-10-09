@@ -1,7 +1,7 @@
-<h1 align="center">🌥️ Clima Agora </h1>
+<h1 align="center">🌥️ Clima </h1>
 
 <p align="center">
-Web APP utilizando api do OpenWeather, fornecendo informações do clima de cidades em tempo real.  <br/>
+Projeto utilizando api do OpenWeather, fornecendo informações do clima de cidades em tempo real.  <br/>
 </p>
 
 <br>
